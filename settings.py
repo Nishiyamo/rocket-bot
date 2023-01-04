@@ -1,0 +1,4 @@
+TELEGRAM_TOKEN = ""
+BOT_CHAT_ID = ""
+API_BASE = ""
+VIDEO_NAME = ""
