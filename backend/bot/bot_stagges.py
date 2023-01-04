@@ -9,8 +9,8 @@ async def s001_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     )
 
 
-async def s002_initilize(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    message = "Does the "
+async def s002_initialize(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = "Did he the rocket liftoff?"
     reply_keyboard = [["Yes", "No"]]
     # using one_time_keyboard to hide the keyboard
     await update.effective_message.reply_text(
