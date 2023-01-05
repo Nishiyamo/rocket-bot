@@ -15,12 +15,11 @@ class Bisector:
         self.calculed_frame: int = self.get_half_frames()
         self.image = self.api.get_video_frame(self.video.name, self.calculed_frame)
 
-    @property
-    def set_current_frame(self):
-        return self.calculed_frame
+    def lift_off_frame(self):
+        return self.left_frame + 1 == self.right_frame
 
     def get_half_frames(self):
-        return round((self.right_frame - self.left_frame) / 2)
+        return round((self.right_frame + self.left_frame) / 2)
 
     def bisect(self, pass_mid: bool) -> None:
         midle = self.get_half_frames()
