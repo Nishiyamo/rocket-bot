@@ -1,10 +1,11 @@
 from backend.api.framex import FrameX
 from backend.models.video import Video
+from settings import VIDEO_NAME
 
 
 class Bisector:
 
-    def __init__(self, name):
+    def __init__(self, name: str = VIDEO_NAME):
         self.api = FrameX
         self.video: Video = self.api.get_video(video=name)
         self.index: int = 0
